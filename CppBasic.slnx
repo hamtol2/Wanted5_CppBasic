@@ -4,8 +4,10 @@
   </Configurations>
   <Project Path="Array/Array.vcxproj" Id="71f065b1-b000-4061-a6a5-2c4acafc9cb6" />
   <Project Path="BuildProcess/BuildProcess.vcxproj" Id="c14e882c-bfae-4e10-9910-93206ae282d7" />
+  <Project Path="Class/Class.vcxproj" Id="cc2fba7e-0795-41f7-92b4-adba953e895c" />
   <Project Path="ConsoleInput/ConsoleInput.vcxproj" Id="b90724a7-f7f2-4a5b-8e55-7b6e7ba2a0dd" />
   <Project Path="ConsoleIO/ConsoleIO.vcxproj" Id="640cbf62-334c-4339-a6fd-b830dbfcc3da" />
+  <Project Path="ForwardDeclaration/ForwardDeclaration.vcxproj" Id="a95e6369-87d9-4eeb-a0d5-d65824b2ec60" />
   <Project Path="Pointer/Pointer.vcxproj" Id="faf563f2-25af-444b-b7ea-d3266cbb9346" />
   <Project Path="String/String.vcxproj" Id="5dc78a99-2552-4603-9949-f1be08869cca" />
 </Solution>
