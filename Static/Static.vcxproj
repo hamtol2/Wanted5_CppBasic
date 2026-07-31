@@ -13,8 +13,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1ef969cd-1e02-4eee-88a9-b89229967d0d}</ProjectGuid>
-    <RootNamespace>OperatorOverloading</RootNamespace>
+    <ProjectGuid>{dfbf1e93-bf2f-4a6f-93c4-1db2a5256a3c}</ProjectGuid>
+    <RootNamespace>Static</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -86,11 +86,16 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="File1.cpp" />
+    <ClCompile Include="File2.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Point.h" />
+    <ClInclude Include="File1.h" />
+    <ClInclude Include="File2.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Static.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
