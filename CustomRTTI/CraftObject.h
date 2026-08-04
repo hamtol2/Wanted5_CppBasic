@@ -46,3 +46,27 @@ std::shared_ptr<T> Cast(const std::shared_ptr<U>& object)
 	// 형변환하려는 타입이 아니면 null 반환.
 	return nullptr;
 }
+
+// 타입 시스템에 제공할 함수를 매크로로 구현.
+// 단일 상속을 지원.
+#define TYPE_DECLARATIONS(Type, ParentType)							\
+	using super = ParentType;										\
+protected:															\
+	static size_t TypeIdClass()										\
+	{																\
+		static int runTimeTypeId = 0;								\
+		return reinterpret_cast<size_t>(&runTimeTypeId);			\
+	}																\
+public:																\
+	static size_t TypeId()											\
+	{																\
+		return Type::TypeIdClass();									\
+	}																\
+	virtual size_t GetType() const override							\
+	{																\
+		return Type::TypeIdClass();									\
+	}																\
+	virtual bool Is(size_t id) const override						\
+	{																\
+		return (id == TypeIdClass()) ? true : ParentType::Is(id);	\
+	}
