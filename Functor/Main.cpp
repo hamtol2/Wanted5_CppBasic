@@ -25,8 +25,29 @@ int main()
 	std::vector<int> data = { 3, 2, 4, 5, 1, 6, 3, 4, 5, 6, 1, 10, };
 
 	// 정렬.
-	Greater greater;
-	std::sort(data.begin(), data.end(), Less());
+	//Greater greater;
+	//std::sort(data.begin(), data.end(), Less());
+
+	// 람다를 정렬 조건에 사용.
+	std::sort(
+		data.begin(),
+		data.end(),
+		[](int left, int right)/* -> bool*/
+		{
+			return left < right;
+		}
+	);
+
+	int result = 0;
+	auto add = [&result](int value)
+		{
+			result += value;
+		};
+
+	add(10);
+	add(20);
+
+	std::cout << result << "\n";
 
 	// 결과 출력.
 	for (const int item : data)
